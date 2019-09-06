@@ -8,26 +8,26 @@ import org.testng.annotations.*;
 
 public class BaseClass 
 {
-	protected static WebDriver D;
+	protected WebDriver D;
 	
 	@Parameters("LanguageBinder")
-	@BeforeTest
-	public static void launchBrowser(String LanguageBinder)
+	@BeforeClass
+	public void launchBrowser(String LanguageBinder)
 	{
-		System.setProperty("WebDriver.Chrome.Driver", LanguageBinder);
+		System.setProperty("webdriver.chrome.driver", LanguageBinder);
 		D = new ChromeDriver();
 		D.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	@Parameters("Application")
-	@BeforeClass
-	public static void launchApplication(String Application)
+	@BeforeMethod
+	public void loadApplication(String Application)
 	{
 		D.get(Application);
 	}
 	
-	@AfterClass
-	public static void close()
+	@AfterMethod
+	public void close()
 	{
 		D.close();
 	}

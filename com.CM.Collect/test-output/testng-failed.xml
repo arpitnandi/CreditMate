@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="PW" value="#Arpit@92"/>
+    <parameter name="UN" value="arpit.n@testyantra.com"/>
+    <parameter name="LanguageBinder" value="C:\\Users\\Arpith\\eclipse-workspace\\LanguageBinders\\chromedriver.exe"/>
+    <parameter name="Application" value="https://stage-collect.creditmate.in/"/>
+    <classes>
+      <class name="com.CM.TestScripts.Test_00_Startup_Page">
+        <methods>
+          <include name="lenderLogin"/>
+          <include name="creditmateLogin"/>
+          <include name="loadApplication"/>
+          <include name="launchBrowser"/>
+          <include name="partnerLogin"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- com.CM.TestScripts.Test_00_Startup_Page -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

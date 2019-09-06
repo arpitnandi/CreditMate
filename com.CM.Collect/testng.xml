@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+  <test name="Test">
   <parameter name = "LanguageBinder" value = "C:\\Users\\Arpith\\eclipse-workspace\\LanguageBinders\\chromedriver.exe" />
   <parameter name = "Application" value = "https://stage-collect.creditmate.in/" />
   <parameter name = "UN" value = "arpit.n@testyantra.com" />
-  <paremeter name = "PW" value = "#Arpit@92" />
+  <parameter name = "PW" value = "#Arpit@92" />
   <classes>
-    <class name = "com.CM.TestScripts.Test_00"/>
+    <class name = "com.CM.TestScripts.Test_00_Startup_Page"/>
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -4,16 +4,16 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="PW" value="#Arpit@92"/>
     <parameter name="UN" value="arpit.n@testyantra.com"/>
-    <parameter name="LanguageBinder" value="C:\\Users\\Arpith\\eclipse-workspace\\LanguageBinders\\chromedriver.exe"/>
+    <parameter name="LanguageBinder" value="C:\\Eclps_Projects\\Browser-Drivers\\chromedriver.exe"/>
     <parameter name="Application" value="https://stage-collect.creditmate.in/"/>
     <classes>
       <class name="com.CM.TestScripts.Test_00_Startup_Page">
         <methods>
-          <include name="lenderLogin"/>
-          <include name="creditmateLogin"/>
+          <include name="lenderLogin" invocation-numbers="0"/>
+          <include name="creditMateLogin" invocation-numbers="0"/>
           <include name="loadApplication"/>
           <include name="launchBrowser"/>
-          <include name="partnerLogin"/>
+          <include name="partnerLogin" invocation-numbers="0"/>
           <include name="close"/>
         </methods>
       </class> <!-- com.CM.TestScripts.Test_00_Startup_Page -->

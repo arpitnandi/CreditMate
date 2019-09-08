@@ -1,4 +1,4 @@
-package com.CM.BasePackage;
+package com.CM.Collect.BasePackage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,7 +11,7 @@ public class BaseClass
 	protected WebDriver D;
 	
 	@Parameters("LanguageBinder")
-	@BeforeClass
+	@BeforeTest
 	public void launchBrowser(String LanguageBinder)
 	{
 		System.setProperty("webdriver.chrome.driver", LanguageBinder);
@@ -23,10 +23,10 @@ public class BaseClass
 	@BeforeMethod
 	public void loadApplication(String Application)
 	{
-		D.get(Application);
+		D.navigate().to(Application);;
 	}
 	
-	@AfterMethod
+	@AfterSuite
 	public void close()
 	{
 		D.close();

@@ -3,9 +3,6 @@
 <suite name="Suite">
   <test name="Test">
   <parameter name = "LanguageBinder" value = "C:\\Users\\Arpith\\eclipse-workspace\\LanguageBinders\\chromedriver.exe" />
-  <parameter name = "Application" value = "https://stage-collect.creditmate.in/" />
-  <parameter name = "UN" value = "arpit.n@testyantra.com" />
-  <parameter name = "PW" value = "#Arpit@92" />
   <classes>
     <class name = "com.CM.TestScripts.Test_00_Startup_Page"/>
   </classes>

@@ -10,20 +10,21 @@ public class BaseClass
 {
 	protected WebDriver D;
 	
-	@Parameters("LanguageBinder")
+	@Parameters({"LanguageBinder","Application"})
 	@BeforeClass
-	public void launchBrowser(String LanguageBinder)
+	public void launchBrowser(String LanguageBinder,String Application)
 	{
 		System.setProperty("webdriver.chrome.driver", LanguageBinder);
 		D = new ChromeDriver();
+		D.get(Application);
 		D.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
-	@Parameters("Application")
+	@Parameters({"Interface","UserType","Credentials"})
 	@BeforeMethod
-	public void loadApplication(String Application)
+	public void loginUser(String Interface,String UserType,String Credintials)
 	{
-		D.get(Application);
+		
 	}
 	
 	@AfterMethod

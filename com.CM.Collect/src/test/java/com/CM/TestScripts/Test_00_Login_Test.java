@@ -5,7 +5,7 @@ import org.testng.annotations.*;
 
 import com.CM.BasePackage.BaseClass;
 
-public class Test_00_Startup_Page extends BaseClass
+public class Test_00_Login_Test extends BaseClass
 {
 	@Parameters({"UN","PW"})
 	@Test
